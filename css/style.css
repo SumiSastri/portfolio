@@ -207,7 +207,6 @@ li {
 
 @media only screen and (max-width: 425px) {
 	.intro,
-	.nav-bar-items,
 	.skill-set,
 	.front-end,
 	.back-end,
@@ -229,7 +228,7 @@ li {
 		height: auto;
 		width: 90%;
 	}
-	.end,
+	.nav-bar-items,
 	.cv-synopsis {
 		display: none;
 	}
