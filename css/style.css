@@ -47,39 +47,9 @@ h2 {
 	-webkit-animation-name: skills-display; /* Safari 4.0 - 8.0 */
 	-webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
 	animation-name: skills-display;
-	/* animation-name: animateAgain; */
 	animation-duration: 3s;
 	animation-delay: 11s;
 }
-/* h2 {
-	animation-name: animateAgain;
-	animation-duration: 3s;
-} */
-
-/* @keyframes animateBackwards {
-	from {
-		top: 0;
-		transform: rotate(0deg);
-		top: 1em;
-		transform: rotate(0deg);
-	}
-	to {
-		top: 1em;
-		transform: rotate(30deg);
-		bottom: 0;
-		transform: rotate(30deg);
-	}
-} */
-/* @keyframes animateAgain {
-	from {
-		bottom: 0;
-		transform: rotate(30deg);
-	}
-	to {
-		top: 1em;
-		transform: rotate(0deg);
-	}
-} */
 
 h3 {
 	text-align: center;
