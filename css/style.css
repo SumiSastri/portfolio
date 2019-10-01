@@ -46,17 +46,17 @@ h2 {
 	background: lightgray;
 	-webkit-animation-name: skills-display; /* Safari 4.0 - 8.0 */
 	-webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
-	animation-name: animateBackwards;
-	animation-name: animateAgain;
+	animation-name: skills-display;
+	/* animation-name: animateAgain; */
 	animation-duration: 3s;
 	animation-delay: 11s;
 }
-h2 {
+/* h2 {
 	animation-name: animateAgain;
 	animation-duration: 3s;
-}
+} */
 
-@keyframes animateBackwards {
+/* @keyframes animateBackwards {
 	from {
 		top: 0;
 		transform: rotate(0deg);
@@ -69,8 +69,8 @@ h2 {
 		bottom: 0;
 		transform: rotate(30deg);
 	}
-}
-@keyframes animateAgain {
+} */
+/* @keyframes animateAgain {
 	from {
 		bottom: 0;
 		transform: rotate(30deg);
@@ -79,7 +79,7 @@ h2 {
 		top: 1em;
 		transform: rotate(0deg);
 	}
-}
+} */
 
 h3 {
 	text-align: center;
