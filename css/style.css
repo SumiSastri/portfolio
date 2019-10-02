@@ -82,7 +82,7 @@ p {
 
 .nav-bar-items {
 	display: grid;
-	grid-template-columns: 40% 40% 20%;
+	grid-template-columns: 35% 40% 25%;
 }
 
 ul {
