@@ -6,7 +6,7 @@ html,
 body {
 	font-family: 'Crimson Text', serif;
 	margin: 0;
-	padding: 10px;
+	padding: 5px;
 	min-height: 100vh;
 }
 
@@ -38,18 +38,17 @@ a:hover {
 	color: navy;
 }
 
+h1 {
+	margin: 25px;
+}
+
 h2 {
-	margin: 5px;
-	padding: 5px;
 	text-align: center;
 	color: slateblue;
 	font-size: 25px;
 	background: lightgray;
-	-webkit-animation-name: skills-display; /* Safari 4.0 - 8.0 */
-	-webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
-	animation-name: skills-display;
-	animation-duration: 3s;
-	animation-delay: 11s;
+	padding: 2px;
+	margin: 2px;
 }
 
 h3 {
@@ -83,7 +82,7 @@ p {
 
 .nav-bar-items {
 	display: grid;
-	grid-template-columns: 35% 40% 25%;
+	grid-template-columns: 25% 25% 25% 25%;
 }
 
 ul {
