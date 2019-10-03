@@ -182,7 +182,10 @@ li {
 	.front-end,
 	.back-end,
 	.dev-environment,
-	.testing-and-compilers,
+	.testing-and-compilers {
+		display: flex;
+	}
+	.footer-items,
 	.portfolio {
 		display: block;
 	}
