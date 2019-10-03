@@ -184,6 +184,8 @@ li {
 	.dev-environment,
 	.testing-and-compilers {
 		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
 	}
 	.footer-items,
 	.portfolio {
