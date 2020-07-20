@@ -4,7 +4,7 @@
 
 html,
 body {
-	font-family: 'Crimson Text', serif;
+	font-family: 'Oswald', sans-serif;
 	margin: 0;
 	padding: 5px;
 	min-height: 100vh;
@@ -30,12 +30,12 @@ body {
 }
 
 a {
-	color: slateblue;
+	color: navy;
 	font-size: 20px;
 }
 
 a:hover {
-	color: navy;
+	color: slateblue;
 }
 
 h1 {
@@ -44,7 +44,7 @@ h1 {
 
 h2 {
 	text-align: center;
-	color: slateblue;
+	color: darkslategray;
 	font-size: 25px;
 	background: lightgray;
 	padding: 2px;
@@ -55,11 +55,11 @@ h3 {
 	text-align: center;
 	font-weight: bold;
 	font-size: 22px;
-	color: slateblue;
+	color: darkslategray;
 }
 
 h4 {
-	color: slateblue;
+	color: darkslategray;
 	font-size: 18px;
 }
 
@@ -74,10 +74,10 @@ h6 {
 
 p {
 	padding: 2px;
-	line-height: 1.75em;
-	color: slateblue;
+	line-height: 2em;
+	color: darkslategray;
 	margin: 10px;
-	font-size: 20px;
+	font-size: 16px;
 }
 
 .nav-bar-items {
