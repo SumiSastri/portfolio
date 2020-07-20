@@ -1,2 +1,2 @@
 # SumiSastri.github.io
-Full-stack developer
+Junior full-stack developer
