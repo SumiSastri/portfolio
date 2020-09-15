@@ -1,4 +1,6 @@
-* {
+*,
+*::after,
+*::before {
   box-sizing: border-box;
 }
 
@@ -134,22 +136,7 @@ li {
 .modal.active {
   transform: translate(-50%, -50%) scale(1);
 }
-/* overlay */
-#overlay {
-  position: fixed;
-  transition: 200ms ease-in-out;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  background-color: lightgray;
-  opacity: 0;
-  pointer-events: none;
-}
-#overlay.active {
-  opacity: 1;
-  pointer-events: all;
-}
+
 /* close x button */
 .close {
   cursor: pointer;
@@ -169,7 +156,7 @@ li {
   cursor: pointer;
 }
 
-.button {
+button {
   background: rgb(52, 16, 16);
   padding: 1em 2em;
   color: #fff;
@@ -177,9 +164,10 @@ li {
   border-radius: 5px;
   cursor: pointer;
 }
-.button:hover {
+button:hover {
   background: rgb(119, 25, 25);
 }
+
 .modal-header h2,
 .modal-footer h2 {
   margin: 0;
