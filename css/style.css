@@ -153,19 +153,19 @@ li {
   pointer-events: all;
 }
 /* close x button */
-.close {
+.close-modal {
   cursor: pointer;
   border: dashed 2px darkgrey;
-  padding: 2px;
-  margin: 2px;
-  color: black;
+  padding: 25px;
+  margin: 25px;
+  color: lightgoldenrodyellow;
   float: right;
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: bold;
 }
 
-.close:hover,
-.close:focus {
+.close-modal:hover,
+.close-modal:focus {
   color: #000;
   text-decoration: none;
   cursor: pointer;
