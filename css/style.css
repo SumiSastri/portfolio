@@ -136,7 +136,22 @@ li {
 .modal.active {
   transform: translate(-50%, -50%) scale(1);
 }
-
+/* overlay */
+#overlay {
+  position: fixed;
+  transition: 200ms ease-in-out;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: lightgray;
+  opacity: 0;
+  pointer-events: none;
+}
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
 /* close x button */
 .close {
   cursor: pointer;
@@ -163,6 +178,8 @@ button {
   border: 0;
   border-radius: 5px;
   cursor: pointer;
+  margin: 3px;
+  width: 40%;
 }
 button:hover {
   background: rgb(119, 25, 25);

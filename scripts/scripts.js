@@ -1,14 +1,13 @@
 const openModalButtons = document.querySelectorAll('[data-modal-target]');
-console.log(openModalButtons);
+// console.log(openModalButtons);
 const closeModalButtons = document.querySelectorAll('[data-close-button]');
-console.log(closeModalButtons);
+// console.log(closeModalButtons);
 
 openModalButtons.forEach((button) => {
   button.addEventListener('click', () => {
     const modal = document.querySelector(button.dataset.modalTarget);
-
     openModal(modal);
-    console.log(modal);
+    // console.log(modal);
   });
 });
 
