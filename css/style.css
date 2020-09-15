@@ -11,10 +11,14 @@ body {
 }
 
 .nav-bar-items {
-  /* display: grid;
-  grid-template-columns: auto; */
   display: flex;
 }
+.skill-set {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
 a {
   color: rgb(52, 16, 16);
   font-size: 20px;
@@ -93,15 +97,16 @@ ul {
   flex-wrap: wrap;
 }
 
-li {
-  list-style: none;
-  padding: 1.15em;
-  font-size: 20px;
-}
 .role-and-responsibilities ul {
   padding: 0;
   font-size: 30px;
   color: darkolivegreen;
+}
+
+li {
+  list-style: none;
+  padding: 1.15em;
+  font-size: 20px;
 }
 
 .role-and-responsibilities li {
@@ -109,22 +114,59 @@ li {
   font-size: 15px;
   padding: 0.8em;
 }
-/* modal global variables */
-:root {
-  --modal-duration: 1s;
-  --modal-color: rgb(52, 16, 16);
-}
-/* overlay */
-.modal .portfolio-modal {
-  display: none;
+
+.modal {
   position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
+  z-index: 100;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 1px solid darkgrey;
+  border-radius: 5%;
   height: 100%;
   width: 100%;
+  max-width: 80%;
   overflow: auto;
-  background-color: rgba(0, 0, 0, 0.2);
+}
+/* create active pseudo classes to toggle in javascript */
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+/* overlay */
+#overlay {
+  position: fixed;
+  transition: 200ms ease-in-out;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: lightgray;
+  opacity: 0;
+  pointer-events: none;
+}
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+/* close x button */
+.close {
+  cursor: pointer;
+  border: dashed 2px darkgrey;
+  padding: 2px;
+  margin: 2px;
+  color: black;
+  float: right;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .button {
@@ -136,7 +178,7 @@ li {
   cursor: pointer;
 }
 .button:hover {
-  background: darkslategray;
+  background: rgb(119, 25, 25);
 }
 .modal-header h2,
 .modal-footer h2 {
@@ -144,8 +186,12 @@ li {
 }
 .modal-header {
   background: rgb(52, 16, 16);
-  padding: 15px;
   color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border: 1px solid darkgrey;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
@@ -156,6 +202,7 @@ li {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
+
 /* width depends how much you want to cover */
 .modal-content {
   margin: 10% auto;
@@ -163,145 +210,13 @@ li {
   background-color: lightgoldenrodyellow;
   width: 90%;
   box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
-  animation-name: modalopen;
-  animation-duration: var(--modal-duration);
 }
-
+/* cv modal content styling */
 .cv-history-headers {
   font-size: 20px;
 }
-.close .closePortfolioModalBtn {
-  color: #ccc;
-  float: right;
-  font-size: 30px;
-  color: #fff;
-}
 
-.close:hover,
-.close-portfolio-modal-btn:hover,
-.close:focus .close-portfolio-modal-btn:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-@keyframes modalopen {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-.skill-set {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-.front-end {
-  -webkit-animation-name: skills-display; /* Safari 4.0 - 8.0 */
-  -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
-  animation-name: skills-display;
-  animation-duration: 4s;
-  animation-delay: 2s;
-}
-.back-end {
-  -webkit-animation-name: skills-displaoy; /* Safari 4.0 - 8.0 */
-  -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
-  animation-name: skills-display;
-  animation-duration: 4s;
-  animation-delay: 4s;
-}
-
-.testing-and-compilers {
-  -webkit-animation-name: skills-display; /* Safari 4.0 - 8.0 */
-  -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
-  animation-name: skills-display;
-  animation-duration: 4s;
-  animation-delay: 6s;
-}
-
-.dev-environment {
-  -webkit-animation-name: skills-display; /* Safari 4.0 - 8.0 */
-  -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
-  animation-name: skills-display;
-  animation-duration: 4s;
-  animation-delay: 8s;
-}
-
-@keyframes skills-display {
-  0% {
-    transform: scale(0.1);
-    opacity: 0;
-  }
-  60% {
-    transform: scale(1.2);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-.portfolio {
-  max-height: auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  background-color: lightgoldenrodyellow;
-}
-
-@media only screen and (max-width: 425px) {
-  .intro,
-  .skill-set,
-  .front-end,
-  .back-end,
-  .dev-environment,
-  .testing-and-compilers {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  .footer-items,
-  .portfolio {
-    display: block;
-  }
-
-  h2 {
-    display: flex;
-    flex-wrap: wrap;
-    font-size: 20px;
-    animation-delay: 2s;
-  }
-  .portfolio-photo {
-    border-radius: 50%;
-    background-color: darkgrey;
-    height: auto;
-    width: 90%;
-  }
-  .nav-bar-items,
-  .cv-synopsis {
-    display: none;
-  }
-}
-@media only screen and (max-width: 680px) {
-  .intro,
-  .portfolio .skill-set {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-}
-@media only screen and (max-width: 800px) {
-  .intro,
-  .portfolio .skill-set {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-}
-
+/* Portfolio modal content */
 #slider,
 .wrap,
 .slide-content {
@@ -329,7 +244,7 @@ li {
   background-image: url('../assets//GA-Booker.png');
 }
 .slide3 {
-  background-image: url('../assets/GA-Fixit.png');
+  background-image: url('../assets/chat-app.mov');
 }
 
 .slide-content {
@@ -339,9 +254,10 @@ li {
   align-items: center;
   text-align: center;
 }
+
 .slide-content span {
-  font-size: 5rem;
-  color: #fff;
+  font-size: 4rem;
+  color: lightsteelblue;
 }
 
 .arrow {
@@ -356,14 +272,14 @@ li {
 
 #arrow-left {
   border-width: 30px 40px 30px 0;
-  border-color: transparent #fff transparent transparent;
+  border-color: transparent lightslategray transparent transparent;
   left: 0;
   margin-left: 30px;
 }
 
 #arrow-right {
   border-width: 30px 0 30px 40px;
-  border-color: transparent transparent transparent #fff;
+  border-color: transparent transparent transparent lightslategray;
   right: 0;
   margin-right: 30px;
 }

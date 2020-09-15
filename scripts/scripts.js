@@ -1,58 +1,39 @@
-// Get DOM Elements by id attributes
-const modal = document.querySelector('#data-cv-modal');
-const modalBtn = document.querySelector('#data-cv-modal-btn');
-const closeBtn = document.querySelector('.close');
+const openModalButtons = document.querySelectorAll('[data-modal-target]');
+const closeModalButtons = document.querySelectorAll('[data-close-button]');
+const overlay = document.getElementById('overlay');
 
-// Events
-modalBtn.addEventListener('click', openModal);
-closeBtn.addEventListener('click', closeModal);
-window.addEventListener('click', outsideClick);
+openModalButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    const modal = document.querySelector(button.dataset.modalTarget);
+    openModal(modal);
+  });
+});
 
-// Open
-function openModal() {
-  console.log(123);
-  //   change from display none in css to display block
-  modal.style.display = 'block';
+overlay.addEventListener('click', () => {
+  const modals = document.querySelectorAll('.modal.active');
+  modals.forEach((modal) => {
+    closeModal(modal);
+  });
+});
+
+closeModalButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    const modal = button.closest('.modal');
+    closeModal(modal);
+  });
+});
+
+function openModal(modal) {
+  if (modal == null) return;
+  modal.classList.add('active');
+  overlay.classList.add('active');
 }
 
-// Close
-function closeModal() {
-  console.log(123);
-  //   change back to none
-  modal.style.display = 'none';
+function closeModal(modal) {
+  if (modal == null) return;
+  modal.classList.remove('active');
+  overlay.classList.remove('active');
 }
-// disable ability to click close outside the modal area
-function outsideClick(e) {
-  if (e.target == modal) {
-    modal.style.display = 'none';
-  }
-}
-// second modal - portfolio
-const portfolioModal = document.querySelector('#data-portfolioModal');
-const openPortfolioModalBtn = document.querySelector(
-  '#data-portfolio-modal-btn'
-);
-const closePortfolioModalBtn = document.querySelector(
-  '.close-portfolio-modal-btn'
-);
-
-openPortfolioModalBtn.addEventListener('click', openPortfolioModal);
-closePortfolioModalBtn.addEventListener('click', closePortfolioModal);
-
-function openPortfolioModal() {
-  console.log(234);
-  portfolioModal.style.display = 'block';
-}
-function closePortfolioModal() {
-  portfolioModal.style.display = 'none';
-}
-
-function outsideClick(e) {
-  if (e.target == portfolioModal) {
-    portfolioModal.style.display = 'none';
-  }
-}
-// Modal content now an image slider
 let sliderImages = document.querySelectorAll('.slide'),
   arrowLeft = document.querySelector('#arrow-left'),
   arrowRight = document.querySelector('#arrow-right'),
