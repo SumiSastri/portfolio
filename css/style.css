@@ -22,12 +22,12 @@ body {
 }
 
 a {
-  color: rgb(52, 16, 16);
+  color: slateblue;
   font-size: 20px;
 }
 
 a:hover {
-  color: slateblue;
+  color: rgb(52, 16, 16);
 }
 
 .intro {
@@ -46,9 +46,20 @@ a:hover {
   width: 95%;
   margin: 50px 0px 5px 15px;
 }
-
+.contact-details {
+  display: flex;
+  justify-content: space-around;
+}
 .cv-synopsis {
   background-color: lightgoldenrodyellow;
+}
+
+.modal-trigger-buttons {
+  display: flex;
+  justify-content: space-around;
+}
+.fab-fa-linkedin {
+  width: 150px;
 }
 
 h1 {
@@ -156,10 +167,9 @@ li {
 .close-modal {
   cursor: pointer;
   border: dashed 2px darkgrey;
-  padding: 25px;
-  margin: 25px;
+  padding: 15px;
+  margin: 15px;
   color: lightgoldenrodyellow;
-  float: right;
   font-size: 3rem;
   font-weight: bold;
 }
@@ -216,11 +226,14 @@ button:hover {
   width: 90%;
   box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
 }
-/* cv modal content styling */
+/* cv modal content */
 .cv-history-headers {
   font-size: 20px;
 }
-
+.logos {
+  height: 75px;
+  width: auto;
+}
 /* Portfolio modal content */
 #slider,
 .wrap,
@@ -255,13 +268,10 @@ button:hover {
 .slide-content {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
 }
 
 .slide-content span {
-  font-size: 4rem;
+  font-size: 3rem;
   color: lightsteelblue;
 }
 

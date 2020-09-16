@@ -58,7 +58,16 @@
             src="./assets/Sumi-DP-Color.jpg"
             alt="Sumi Sastri profile picture"
           />
-          <hr />
+
+          <div class="contact-details">
+            <h3>
+              Contact me via LinkedIn
+              <hr />
+              <a target="_blank" href="https://www.linkedin.com/in/sumisastri">
+                <i class="fab fa-linkedin"></i
+              ></a>
+            </h3>
+          </div>
         </div>
 
         <section class="cv-synopsis">
@@ -92,13 +101,15 @@
             Web-Sockets. I enjoy the learning process and have showcased the
             application of these new skills in my GitHub repo.
           </p>
-          <button data-modal-target="#modal-open2" class="open-modal">
-            Side Projects
-          </button>
-          <br />
-          <button data-modal-target="#modal-open1" class="open-modal">
-            My Dev CV
-          </button>
+          <div class="modal-trigger-buttons">
+            <button data-modal-target="#modal-open2" class="open-modal">
+              Recent side projects
+            </button>
+            <br />
+            <button data-modal-target="#modal-open1" class="open-modal">
+              Work history
+            </button>
+          </div>
         </section>
       </section>
 
@@ -106,27 +117,37 @@
         <div class="modal" id="modal-open1">
           <div class="modal-content">
             <div class="modal-header">
-              <button data-close-button class="close-modal">&times;</button>
+              <span data-close-button class="close-modal">&times;</span>
               <h2>Sumi Sastri Dev CV</h2>
             </div>
 
             <div class="modal-body">
               <div class="role-and-responsibilities">
                 <p class="cv-history-headers">
+                  <img
+                    name="gvc-logo"
+                    class="logos"
+                    src="./assets/gvc-logo.jpeg"
+                    alt="gvc-logo"
+                  />
                   <strong>GVC Group (Junior developer - current)</strong>
                   <em>Retail & online gaming conglomerate</em>
                 </p>
                 <p>
                   * Migrated and deployed over 50 React-Redux components from
-                  Flow to TypeScript Worked on API calls for 2 internal apps
-                  moving data from secure back-end databases to the front-end
-                  for end-user access
+                  Flow to TypeScript
                 </p>
                 <p>
                   * Worked on API calls for 2 internal apps moving data from
                   secure back-end databases to the front-end for end-user access
                 </p>
                 <p class="cv-history-headers">
+                  <img
+                    name="gvc-logo"
+                    class="logos"
+                    src="./assets/ns-logo.jpeg"
+                    alt="gvc-logo"
+                  />
                   <strong> New Statesman (Freelance Nov 2019- Mar 2020)</strong>
                   <em>Digital news and current affairs publishers</em>
                 </p>
@@ -140,6 +161,12 @@
                   Elections 2019, Christmas 2019 and New Year 2020
                 </p>
                 <p class="cv-history-headers">
+                  <img
+                    name="gvc-logo"
+                    class="logos"
+                    src="./assets/goodlord-logo.jpeg"
+                    alt="gvc-logo"
+                  />
                   <strong> goodlord (intern June 2019 – Sept 2019)</strong>
                   <em>Property-tech start-up</em>
                 </p>
@@ -179,7 +206,7 @@
         <div class="modal" id="modal-open2">
           <div class="modal-content">
             <div class="modal-header">
-              <button data-close-button class="close-modal">&times;</button>
+              <span data-close-button class="close-modal">&times;</span>
               <h2>Recent Side Projects</h2>
             </div>
             <div class="modal-body">
