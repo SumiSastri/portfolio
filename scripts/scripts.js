@@ -1,3 +1,30 @@
+function parallaxEffect(element, distance, speed) {
+  const item = document.querySelector(element);
+  item.style.transform = translateY(`${distance * speed}px`);
+}
+window.addEventListener('scroll', function () {
+  parralax('header', window.scrollY, 1);
+});
+const textToType = ['What makes me a happy developer'];
+let textCount = 0;
+let textCharacters = 0;
+let currentText = '';
+let letter = '';
+// IFFY - self invoked function - function declaration and invocation at the same time
+(function type() {
+  if (textCount === textToType.length) {
+    textCount = 0;
+  }
+  currentText = textToType[textCount];
+  letter = currentText.slice(0, ++textCharacters);
+  document.querySelector('.typing-effect').textContent = letter;
+  if (letter.length === currentText.length) {
+    textCount++;
+    textIndex = 0;
+  }
+  setTimeout(type, 100);
+})();
+
 const openModalButtons = document.querySelectorAll('[data-modal-target]');
 // console.log(openModalButtons);
 const closeModalButtons = document.querySelectorAll('[data-close-button]');

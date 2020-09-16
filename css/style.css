@@ -14,6 +14,7 @@ body {
 
 .nav-bar-items {
   display: flex;
+  position: relative;
 }
 .skill-set {
   display: flex;
@@ -36,6 +37,7 @@ a:hover {
   grid-template-rows: auto;
   max-height: auto;
   background-color: lightgoldenrodyellow;
+  position: absolute;
 }
 
 .portfolio-photo {
@@ -48,18 +50,25 @@ a:hover {
 }
 .contact-details {
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap;
 }
 .cv-synopsis {
   background-color: lightgoldenrodyellow;
+  align-content: center;
+}
+.cv-header {
+  display: flex;
+  height: 60px;
+  width: 40%;
+  align-content: center;
 }
 
 .modal-trigger-buttons {
   display: flex;
-  justify-content: space-around;
 }
-.fab-fa-linkedin {
-  width: 150px;
+.fab fa-linkedin {
+  width: auto;
+  height: 50px;
 }
 
 h1 {
@@ -80,7 +89,7 @@ h3 {
   text-align: center;
   font-weight: bold;
   font-size: 22px;
-  color: darkslategray;
+  color: rgb(52, 16, 16);
 }
 
 h4 {
@@ -158,6 +167,7 @@ li {
   background-color: lightgray;
   opacity: 0;
   pointer-events: none;
+  overflow: auto;
 }
 #overlay.active {
   opacity: 1;
@@ -264,6 +274,9 @@ button:hover {
 .slide3 {
   background-image: url('../assets/chat-app.mov');
 }
+.slide4 {
+  background-image: url('../assets/chat-app.mov');
+}
 
 .slide-content {
   display: flex;
@@ -277,8 +290,8 @@ button:hover {
 
 .arrow {
   cursor: pointer;
-  position: absolute;
-  top: 50%;
+  position: fixed;
+  top: 70%;
   margin-top: -35px;
   width: 0;
   height: 0;
