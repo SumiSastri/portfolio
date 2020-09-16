@@ -3,9 +3,10 @@ function parallaxEffect(element, distance, speed) {
   item.style.transform = translateY(`${distance * speed}px`);
 }
 window.addEventListener('scroll', function () {
-  parralax('header', window.scrollY, 1);
+  parralaxEffect('.nav-bar-items', window.scrollY, 1);
+  parralaxEffect('.intro', window.scrollY, 1);
 });
-const textToType = ['What makes me a happy developer'];
+const textToType = ['What makes me a happy developer?'];
 let textCount = 0;
 let textCharacters = 0;
 let currentText = '';
