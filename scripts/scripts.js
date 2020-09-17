@@ -5,8 +5,8 @@ function parallaxEffect(element, distance, speed) {
 }
 window.addEventListener('scroll', function () {
   // function call
-  parralaxEffect('.nav-bar-items', window.scrollY, 1);
-  parralaxEffect('.intro', window.scrollY, 2);
+  parralaxEffect('.nav-bar-items', window.scrollY, 2);
+  parralaxEffect('.intro', window.scrollY, 1);
 });
 
 const textToType = ['What makes me a happy developer?'];

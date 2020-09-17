@@ -18,30 +18,24 @@ body {
   height: 200px;
   width: auto;
   /* for parralax effect */
-  position: relative;
+  /* position: relative; */
 }
 
 .skill-set {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  /* for parralax effect */
-  position: relative;
 }
 
 ul {
   display: flex;
   flex-wrap: wrap;
-  /* for parralax effect */
-  position: relative;
 }
 
 li {
   list-style: none;
   padding: 1.15em;
   font-size: 20px;
-  /* for parralax effect */
-  position: relative;
 }
 
 a {
@@ -57,8 +51,11 @@ a:hover {
   display: grid;
   grid-template-columns: 40% 60%;
   grid-template-rows: auto;
-  max-height: auto;
   background-color: aliceblue;
+  /* for parralax effect */
+  /* position: absolute;
+  height: 100vh;
+   */
 }
 
 .portfolio-photo {
