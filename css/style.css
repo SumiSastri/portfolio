@@ -14,11 +14,34 @@ body {
 
 .nav-bar-items {
   display: flex;
+  background-color: azure;
+  height: 200px;
+  width: auto;
+  /* for parralax effect */
+  position: relative;
 }
+
 .skill-set {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  /* for parralax effect */
+  position: relative;
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  /* for parralax effect */
+  position: relative;
+}
+
+li {
+  list-style: none;
+  padding: 1.15em;
+  font-size: 20px;
+  /* for parralax effect */
+  position: relative;
 }
 
 a {
@@ -35,7 +58,7 @@ a:hover {
   grid-template-columns: 40% 60%;
   grid-template-rows: auto;
   max-height: auto;
-  background-color: lightgoldenrodyellow;
+  background-color: aliceblue;
 }
 
 .portfolio-photo {
@@ -46,13 +69,10 @@ a:hover {
   width: 95%;
   margin: 50px 0px 5px 15px;
 }
+
 .contact-details {
   display: flex;
   flex-wrap: wrap;
-}
-.cv-synopsis {
-  background-color: lightgoldenrodyellow;
-  align-content: center;
 }
 .cv-header {
   display: flex;
@@ -60,9 +80,26 @@ a:hover {
   width: auto;
   align-content: center;
 }
-
+.cv-synopsis {
+  /* background-color: lightgoldenrodyellow; */
+  align-content: center;
+}
 .modal-trigger-buttons {
   display: flex;
+}
+
+button {
+  background: rgb(52, 16, 16);
+  padding: 1em 2em;
+  color: #fff;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 3px;
+  width: 40%;
+}
+button:hover {
+  background: rgb(119, 25, 25);
 }
 
 h1 {
@@ -106,29 +143,6 @@ p {
   color: darkslategray;
   margin: 5px;
   font-size: 16px;
-}
-
-ul {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.role-and-responsibilities ul {
-  padding: 0;
-  font-size: 30px;
-  color: darkolivegreen;
-}
-
-li {
-  list-style: none;
-  padding: 1.15em;
-  font-size: 20px;
-}
-
-.role-and-responsibilities li {
-  list-style-type: column;
-  font-size: 15px;
-  padding: 0.8em;
 }
 
 .modal {
@@ -185,20 +199,6 @@ li {
   cursor: pointer;
 }
 
-button {
-  background: rgb(52, 16, 16);
-  padding: 1em 2em;
-  color: #fff;
-  border: 0;
-  border-radius: 5px;
-  cursor: pointer;
-  margin: 3px;
-  width: 40%;
-}
-button:hover {
-  background: rgb(119, 25, 25);
-}
-
 .modal-header h2,
 .modal-footer h2 {
   margin: 0;
@@ -234,6 +234,18 @@ button:hover {
 .cv-history-headers {
   font-size: 20px;
 }
+.role-and-responsibilities ul {
+  padding: 0;
+  font-size: 30px;
+  color: darkolivegreen;
+}
+
+.role-and-responsibilities li {
+  list-style-type: column;
+  font-size: 15px;
+  padding: 0.8em;
+}
+
 .logos {
   height: 75px;
   width: auto;
@@ -243,7 +255,7 @@ button:hover {
 .wrap,
 .slide-content {
   overflow-x: hidden;
-  height: 90vh;
+  height: 100vh;
   width: auto;
   margin: 0;
   padding: 0;
