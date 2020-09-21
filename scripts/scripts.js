@@ -48,16 +48,16 @@ closeModalButtons.forEach((button) => {
     closeModal(modal);
   });
 });
-
-function openModal(modal) {
+//  open and close modals by changing class list to active and changing css
+const openModal = (modal) => {
   if (modal == null) return;
   modal.classList.add('active');
-}
+};
 
-function closeModal(modal) {
+const closeModal = (modal) => {
   if (modal == null) return;
   modal.classList.remove('active');
-}
+};
 // select nodes by class name and by ids
 let sliderImages = document.querySelectorAll('.slide'),
   arrowLeft = document.querySelector('#arrow-left'),
@@ -65,31 +65,31 @@ let sliderImages = document.querySelectorAll('.slide'),
   current = 0;
 
 // Function declaration - remove display of image when shuffle through images
-function reset() {
+const reset = () => {
   for (let i = 0; i < sliderImages.length; i++) {
     sliderImages[i].style.display = 'none';
   }
-}
+};
 
 // Function call - reset function first clear images then display first
-function startSlide() {
+const startSlide = () => {
   reset();
   sliderImages[0].style.display = 'block';
-}
+};
 
 // Function call - reset function - function declaration left arrow minus indices
-function slideLeft() {
+const slideLeft = () => {
   reset();
   sliderImages[current - 1].style.display = 'block';
   current--;
-}
+};
 
 // Function call - reset function - function declaration right arrow - plus indices
-function slideRight() {
+const slideRight = () => {
   reset();
   sliderImages[current + 1].style.display = 'block';
   current++;
-}
+};
 
 // Left arrow click function call of the slide left
 arrowLeft.addEventListener('click', function () {
