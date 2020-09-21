@@ -263,7 +263,7 @@ p {
 }
 
 .slide1 {
-  background-image: url('../assets/la-boite-logo.png');
+  background-image: url('../assets/ricky-and-morty-logo.png');
 }
 .slide2 {
   background-image: url('../assets/breaking-bad-log.png');
@@ -272,10 +272,10 @@ p {
   background-image: url('../assets/chat-app-logo.png');
 }
 .slide4 {
-  background-image: url('../assets/music-manager-logo.png');
+  background-image: url('../assets/la-boite-logo.png');
 }
 .slide5 {
-  background-image: url('../assets/ricky-and-morty-logo.png');
+  background-image: url('../assets/music-manager-logo.png');
 }
 
 .slide-content {
