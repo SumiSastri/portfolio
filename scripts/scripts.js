@@ -1,8 +1,8 @@
 // function declaration
-function parallaxEffect(element, distance, speed) {
+const parallaxEffect = (element, distance, speed) => {
   const item = document.querySelector(element);
   item.style.transform = `translateY(${distance * speed}px)`;
-}
+};
 window.addEventListener('scroll', function () {
   // function call
   parralaxEffect('.nav-bar-items', window.scrollY, 2);
@@ -14,7 +14,7 @@ let textCount = 0;
 let textCharacters = 0;
 let currentText = '';
 let letter = '';
-// IFFY - self invoked function - function declaration and invocation at the same time
+// IFFY - self invoked function - function declaration and invocation at the same time - ES6?
 (function type() {
   if (textCount === textToType.length) {
     textCount = 0;
