@@ -1,9 +1,9 @@
+// type effect
 const textToType = ['What makes me a happy developer?'];
 let textCount = 0;
 let textCharacters = 0;
 let currentText = '';
 let letter = '';
-// IFFY - self invoked function - function declaration and invocation at the same time - ES6?
 (function type() {
   if (textCount === textToType.length) {
     textCount = 0;
@@ -18,16 +18,14 @@ let letter = '';
   setTimeout(type, 100);
 })();
 
+// modals
 const openModalButtons = document.querySelectorAll('[data-modal-target]');
-// console.log(openModalButtons);
 const closeModalButtons = document.querySelectorAll('[data-close-button]');
-// console.log(closeModalButtons);
 
 openModalButtons.forEach((button) => {
   button.addEventListener('click', () => {
     const modal = document.querySelector(button.dataset.modalTarget);
     openModal(modal);
-    // console.log(modal);
   });
 });
 
@@ -37,7 +35,7 @@ closeModalButtons.forEach((button) => {
     closeModal(modal);
   });
 });
-//  open and close modals by changing class list to active and changing css
+
 const openModal = (modal) => {
   if (modal == null) return;
   modal.classList.add('active');
@@ -47,67 +45,47 @@ const closeModal = (modal) => {
   if (modal == null) return;
   modal.classList.remove('active');
 };
-// select nodes by class name and by ids
+
+//image slider
 let sliderImages = document.querySelectorAll('.slide'),
   arrowLeft = document.querySelector('#arrow-left'),
   arrowRight = document.querySelector('#arrow-right'),
   current = 0;
 
-// Function declaration - remove display of image when shuffle through images
 const reset = () => {
   for (let i = 0; i < sliderImages.length; i++) {
     sliderImages[i].style.display = 'none';
   }
 };
 
-// Function call - reset function first clear images then display first
 const startSlide = () => {
   reset();
   sliderImages[0].style.display = 'block';
 };
 
-// Function call - reset function - function declaration left arrow minus indices
 const slideLeft = () => {
   reset();
   sliderImages[current - 1].style.display = 'block';
   current--;
 };
 
-// Function call - reset function - function declaration right arrow - plus indices
 const slideRight = () => {
   reset();
   sliderImages[current + 1].style.display = 'block';
   current++;
 };
 
-// Left arrow click function call of the slide left
 arrowLeft.addEventListener('click', function () {
-  // first check position in the node list - is it at zero - starting point
   if (current === 0) {
     current = sliderImages.length;
   }
   slideLeft();
 });
 
-// Right arrow click function call of the slide right - reverses the image back to start if current is at the last image then slide right
 arrowRight.addEventListener('click', function () {
   if (current === sliderImages.length - 1) {
     current = -1;
   }
   slideRight();
 });
-// function call of start slide
 startSlide();
-
-// function declaration - not working
-const parallaxEffect = (element, distance, speed) => {
-  const item = document.querySelector(element);
-  item.style.transform = `translateY(${distance * speed}px)`;
-};
-window.addEventListener('scroll', function () {
-  // function call
-  parralaxEffect('.nav-bar-items', window.scrollY, 1.5);
-  parralaxEffect('.skillset', window.scrollY, 1);
-  parralaxEffect('.profile-photo', window.scrollY, 0.1);
-  parralaxEffect('.intro', window.scrollY, 0.1);
-});
