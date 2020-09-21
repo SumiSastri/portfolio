@@ -9,16 +9,16 @@ body {
   font-family: 'Oswald', sans-serif;
   margin: 0;
   padding: 2px;
-  min-height: 100vh;
 }
 
 .nav-bar-items {
   display: flex;
   background-color: azure;
-  height: 200px;
+  height: auto;
+  min-height: 5%;
   width: auto;
-  /* for parralax effect */
-  /* position: relative; */
+  /* position: relative;
+  z-index: -100; for parralax - not working*/
 }
 
 .skill-set {
@@ -52,10 +52,9 @@ a:hover {
   grid-template-columns: 40% 60%;
   grid-template-rows: auto;
   background-color: aliceblue;
-  /* for parralax effect */
+  height: auto;
   /* position: absolute;
-  height: 100vh;
-   */
+  z-index: 100; for parralax not working */
 }
 
 .portfolio-photo {
@@ -149,17 +148,18 @@ p {
   top: 50%;
   transform: translate(-50%, -50%) scale(0);
   transition: 200ms ease-in-out;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: silver;
   border: 1px solid darkgrey;
   border-radius: 5%;
   height: 100%;
   width: 100%;
-  max-width: 80%;
+  max-width: 90%;
   overflow: auto;
 }
 /* create active pseudo classes to toggle in javascript */
 .modal.active {
   transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
 }
 /* overlay */
 #overlay {
@@ -170,12 +170,10 @@ p {
   left: 0;
   bottom: 0;
   background-color: lightgray;
-  opacity: 0;
   pointer-events: none;
   overflow: auto;
 }
 #overlay.active {
-  opacity: 1;
   pointer-events: all;
 }
 /* close x button */
@@ -225,6 +223,7 @@ p {
   padding: 5px;
   background-color: lightgoldenrodyellow;
   width: 90%;
+  opacity: 1;
   box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
 }
 /* cv modal content */

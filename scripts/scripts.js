@@ -1,14 +1,3 @@
-// function declaration
-const parallaxEffect = (element, distance, speed) => {
-  const item = document.querySelector(element);
-  item.style.transform = `translateY(${distance * speed}px)`;
-};
-window.addEventListener('scroll', function () {
-  // function call
-  parralaxEffect('.nav-bar-items', window.scrollY, 2);
-  parralaxEffect('.intro', window.scrollY, 1);
-});
-
 const textToType = ['What makes me a happy developer?'];
 let textCount = 0;
 let textCharacters = 0;
@@ -109,3 +98,16 @@ arrowRight.addEventListener('click', function () {
 });
 // function call of start slide
 startSlide();
+
+// function declaration - not working
+const parallaxEffect = (element, distance, speed) => {
+  const item = document.querySelector(element);
+  item.style.transform = `translateY(${distance * speed}px)`;
+};
+window.addEventListener('scroll', function () {
+  // function call
+  parralaxEffect('.nav-bar-items', window.scrollY, 1.5);
+  parralaxEffect('.skillset', window.scrollY, 1);
+  parralaxEffect('.profile-photo', window.scrollY, 0.1);
+  parralaxEffect('.intro', window.scrollY, 0.1);
+});
