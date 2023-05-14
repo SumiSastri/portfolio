@@ -9,8 +9,7 @@
   <link rel="stylesheet" href="css/style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet" />
   <script src="https://kit.fontawesome.com/ec796bd4f8.js"></script>
-  <link rel="stylesheet"
-    href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
   <link rel=“stylesheet” href=“https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.css“>
 </head>
 
@@ -25,19 +24,19 @@
         <ul class="front-end">
           <h4>Front-end</h4>
           <li><i class="devicon-typescript-plain"></i>Typescript</li>
-          <li><i class="devicon-react-original"></i>React-js</li>
-          <li><i class="devicon-jquery-plain"></i>jQuery</li>
-          <li><i class="devicon-javascript-plain"></i>JavaScript</li>
-          <li><i class="devicon-html5-plain-wordmark"></i>HTML5</li>
-          <li><i class="devicon-css3-plain-wordmark"></i>CSS3</li>
+          <li><i class="devicon-adonisjs-original"></i>NextJs</li>
+          <li><i class="devicon-react-original"></i>ReactJs</li>
+          <li><i class="devicon-jest-plain colored"></i>Testing with Jest</li>
         </ul>
         <ul class="back-end">
           <h4>Back-end</h4>
-          <li><i class="devicon-postgresql-plain"></i>PostgreSQL</li>
+          <li><i class="devicon-amazonwebservices-original"></i>Amazon Web Services</li>
+          <li><i class="devicon-graphql-plain"></i>GraphQl</li>
+          <li><i class="devicon-nodejs-plain-wordmark"></i>NodeJs</li>
+          <li><i class="devicon-express-original"></i>ExpressJs</li>
           <li><i class="devicon-python-plain"></i>Python</li>
-          <li><i class="devicon-mongodb-plain"></i>MongoDB - Mongoose-js</li>
-          <li><i class="devicon-nodejs-plain-wordmark"></i>Node-js</li>
-          <li><i class="devicon-express-original"></i>Express-js</li>
+          <li><i class="devicon-postgresql-plain"></i>PostgreSQL</li>
+          <li><i class="devicon-mongodb-plain"></i>MongoDB</li>
         </ul>
       </section>
     </nav>
@@ -53,7 +52,7 @@
           </h3>
         </div>
       </div>
-
+      <!-- About -->
       <section class="cv-synopsis">
         <div class="cv-header">
           <span><i class="far fa-smile"></i></span>
@@ -70,23 +69,24 @@
           supportive environment and learning from senior developers.
         </p>
         <p>
-          When I finished an internship at <em>goodlord</em> - a property-tech start-up, 
+          When I finished an internship at <em>goodlord</em> - a property-tech start-up,
           then freelancing with news publishers, the <em>New Statesman</em>, I looked for my first
           full-time job. I was one of 40 developers to be invited to Bletchley
-          Park, by <em>GVC</em>, the sports gaming group, one of 2 to be offered a 
+          Park, by <em>GVC</em>, the sports gaming group, one of 2 to be offered a
           job and then one of 130 who lost jobs. The extraordinary year 2020,
           ended working on a contract with i6, a start-up in the airlines industry.
+          It's been an eventful start to my new career and I have learnt so much from
+          my peers and seniors.
         </p>
         <p>
-         It's been an eventful start to my new career and I have learnt so much from 
-         my peers and seniors, as well as continuing to level-up my skills in my spare time. In the last
-          year I have learnt the basics of TypeScript, Jest & Enzyme testing, React-Redux. With my side projects
-          I experimented with Node and Websockets. I enjoy the learning process and have showcased the
+          I am currently working with <strong>Cancer Research UK</strong> as well as continuing to level-up my skills in
+          my spare time. I enjoy the learning process and have showcased the
           application of these new skills in my <span>GitHub repo.<br><a target="_blank"
               href="https://github.com/sumisastri">
               GitHub
               <i class="devicon-github-plain"></i></a></span>
         </p>
+        <!-- Modals -->
         <div class="modal-trigger-buttons">
           <button data-modal-target="#modal-open2" class="open-modal">
             Recent side projects
@@ -98,6 +98,7 @@
         </div>
       </section>
     </section>
+    <!-- CV -->
     <section id="modal1">
       <div class="modal" id="modal-open1">
         <div class="modal-content">
@@ -107,52 +108,55 @@
           </div>
           <div class="modal-body">
             <div class="role-and-responsibilities">
+              <!-- cruk -->
+              <p class="cv-history-headers">
+                <img name="cruck-logo" class="logos" src="./assets/CRUK_logo.jpeg" alt="cancer-research-uk-logo" />
+                <strong>Cancer Research UK (March 2020 - Current)</strong>
+                <em>Charity fundraising for cancer research</em>
+              </p>
+              <p>
+                Working on the activity management forms hub that signs in users to participate in fundraising
+                activities. A TypeScript & ReactJs stack using GraphQL and AWS Serverless
+              </p>
+              <!-- i-6 -->
               <p class="cv-history-headers">
                 <img name="i6-logo" class="logos" src="./assets/i6logo.jpeg" alt="i6-logo" />
-                <strong>i6 Group (Junior developer Oct-Dec 2020)</strong>
+                <strong>i6 Group (Oct-Dec 2020)</strong>
                 <em>Airlines refueling platform</em>
               </p>
               <p>
-                * Worked on features to improve user interface and customer experience in React-Redux
+                Worked on features to improve user interface and customer experience in React-Redux, using Jest & Enzyme
+                as test runners
               </p>
-              <p>
-                * Added tests in Jest and Enzyme to legacy platform components
-              </p>
-              <p>
+              <!-- gvc -->
               <p class="cv-history-headers">
                 <img name="gvc-logo" class="logos" src="./assets/gvc-logo.jpeg" alt="gvc-logo" />
-                <strong>GVC Group (Junior developer Mar-Oct 2020)</strong>
+                <strong>GVC Group (Mar-Oct 2020)</strong>
                 <em>Retail & online gaming conglomerate</em>
               </p>
               <p>
-                * Migrated and deployed over 50 React-Redux components from
+                Migrated over 50 React-Redux components from
                 Flow to TypeScript
               </p>
+              <!-- new statesman -->
               <p class="cv-history-headers">
-                <img name="gvc-logo" class="logos" src="./assets/ns-logo.jpeg" alt="gvc-logo" />
-                <strong> New Statesman (Freelance Nov 2019- Mar 2020)</strong>
+                <img name="newstatesman-logo" class="logos" src="./assets/ns-logo.jpeg" alt="newstatesman-logo" />
+                <strong> New Statesman (Nov 2019- Mar 2020)</strong>
                 <em>Digital news and current affairs publishers</em>
               </p>
               <p>
-                * Combined product owner, scrum master and developer skills to
-                deploy content-driven digital campaigns in vanilla JavaScript,
-                jQuery, HTML5 & CSS3
-              </p>
-              <p>
-                * Released three subscription campaigns - British General
+                Developed three web subscription campaigns - British General
                 Elections 2019, Christmas 2019 and New Year 2020
               </p>
+              <!-- goodlord -->
               <p class="cv-history-headers">
-                <img name="gvc-logo" class="logos" src="./assets/goodlord-logo.jpeg" alt="gvc-logo" />
+                <img name="goodlord-logo" class="logos" src="./assets/goodlord-logo.jpeg" alt="goodlord-logo" />
                 <strong> goodlord (intern June 2019 – Sept 2019)</strong>
                 <em>Property-tech start-up</em>
               </p>
               <p>
-                * Migrated and deployed 3 pages on AWS from HTML-CSS-JQuery to
-                React.js
-              </p>
-              <p>
-                * Integrated 3rd party-data from property-management-systems
+                Migrated and deployed 3 form pages from HTML-CSS-JQuery to
+                ReactJs, integratin 3rd party-data from property-management-systems
                 of Gnomen, Qube, p2Gold and MC-Let to the goodlord app via API
                 calls
               </p>
@@ -164,15 +168,11 @@
                 LinkedIn Profile
                 <i class="fab fa-linkedin"></i></a>
             </h2>
-            <h2>
-              <a target="_blank" href="https://github.com/sumisastri">
-                GitHub
-                <i class="devicon-github-plain"></i></a>
-            </h2>
           </div>
         </div>
       </div>
     </section>
+    <!-- Portfolio -->
     <section id="modal2">
       <div class="modal" id="modal-open2">
         <div class="modal-content">
@@ -181,63 +181,39 @@
             <h2>Recent Side Projects</h2>
           </div>
           <div class="modal-body">
-            <div class="wrap">
-              <div id="arrow-left" class="arrow"></div>
-              <div id="slider">
-                <div class="slide slide1">
-                  <div class="slide-content">
-                    <span> <a target="_blank"
-                        href="https://github.com/SumiSastri/typescript-with-react/tree/master/react-redux-ts">
-                        <i class="devicon-github-plain"></i> Typescript, React & Redux Repo
-                      </a></span>
-                  </div>
-                </div>
-                <div class="slide slide2">
-                  <div class="slide-content">
-                    <span> <a target="_blank"
-                        href="https://github.com/SumiSastri/react-basics-to-hooks/tree/master/breaking-bad">
-                        <i class="devicon-github-plain"></i> PWAs & React Hooks Repo
-                      </a></span>
-                  </div>
-                </div>
-                <div class="slide slide3">
-                  <div class="slide-content">
-                    <span> <a target="_blank"
-                        href="https://github.com/SumiSastri/websockets-tutorials/tree/master/websocketsApp">
-                        <i class="devicon-github-plain"></i> Node, Express & WebSockets Repo
-                      </a></span>
-                  </div>
-                </div>
-                <div class="slide slide4">
-                  <div class="slide-content">
-                    <span> <a target="_blank" href="https://github.com/SumiSastri/music-catalog">
-                      <i class="devicon-github-plain"></i> MERN with React-Redux Repo
-                      </a></span>
-                  </div>
-                </div>
-                <div class="slide slide5">
-                  <div class="slide-content">      
-                    <span> <a target="_blank" href="https://github.com/SumiSastri/music-manager">
-                      <i class="devicon-github-plain"></i> MERN with React-Hooks Repo
-                      </a></span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div id="arrow-right" class="arrow"></div>
+            <!-- Serverless AWS Cognito, AppSync & Amplify -->
+            <p>
+              <a target="-blank"
+                href="https://github.com/SumiSastri/nextjs-aws-app/tree/main/packages/next-user-login-aws-auth-app">NextJs
+                Auth with AWS Cognito</a>
+              Login and Logout app with AWS Amplify, AppSync & Cognito User Pools to authenticate users rendered with
+              the NextJS framework
+            </p>
+            <!-- Serverless AWS CDK -->
+            <p>
+              <a target="_blank"
+                href="https://github.com/SumiSastri/nextjs-aws-app/tree/main/packages/aws-cdk-demo-app">AWS CDK Demo
+                App</a>
+              Serverless rendering of assets in an S3 Bucket with an API call
+            </p>
+            <!-- MERNG stack - express server -->
+            <p>
+              <a target="_blank" href="https://github.com/SumiSastri/merng-stack-using-graphQL">Monorepo Book-App</a>
+              using GraphQL queries and Apollo Server for front-end state management, with MongoDB, ExpressJs, ReactJs &
+              NodeJs in the backend
+            </p>
+          </div>
+          <div class="modal-footer">
+            <h2>
+              <a target="_blank" href="https://github.com/sumisastri">
+                GitHub
+                <i class="devicon-github-plain"></i></a>
+            </h2>
           </div>
         </div>
-        <div class="modal-footer">
-          <h2>
-            <a target="_blank" href="https://github.com/sumisastri">
-              GitHub
-              <i class="devicon-github-plain"></i></a>
-          </h2>
-        </div>
-      </div>
-      </div>
+
     </section>
+
   </main>
   <script src="./scripts/scripts.js" charset="utf-8"></script>
 </body>
