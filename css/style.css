@@ -6,7 +6,7 @@
 
 html,
 body {
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   margin: 0;
   padding: 2px;
 }
@@ -23,6 +23,14 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+}
+
+.external-links {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 2em;
 }
 
 ul {
@@ -263,19 +271,19 @@ p {
 }
 
 .slide1 {
-  background-image: url('../assets/ricky-and-morty-logo.png');
+  background-image: url("../assets/ricky-and-morty-logo.png");
 }
 .slide2 {
-  background-image: url('../assets/breaking-bad-log.png');
+  background-image: url("../assets/breaking-bad-log.png");
 }
 .slide3 {
-  background-image: url('../assets/chat-app-logo.png');
+  background-image: url("../assets/chat-app-logo.png");
 }
 .slide4 {
-  background-image: url('../assets/la-boite-logo.png');
+  background-image: url("../assets/la-boite-logo.png");
 }
 .slide5 {
-  background-image: url('../assets/music-manager-logo.png');
+  background-image: url("../assets/music-manager-logo.png");
 }
 
 .slide-content {
